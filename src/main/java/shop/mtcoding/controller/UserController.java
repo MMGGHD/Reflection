@@ -1,4 +1,6 @@
-package shop.mtcoding;
+package shop.mtcoding.controller;
+
+import shop.mtcoding.annotation.RequestMapping;
 
 public class UserController {
 
