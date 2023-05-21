@@ -1,7 +1,9 @@
 package shop.mtcoding.controller;
 
+import shop.mtcoding.annotation.Controller;
 import shop.mtcoding.annotation.RequestMapping;
 
+@Controller
 public class UserController {
 
     @RequestMapping(uri = "/login")

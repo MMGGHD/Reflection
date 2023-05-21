@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5285a2d-389e-4ce4-8afd-6b392544cacf" name="Changes" comment="컴포넌트 스캔이 적용되지 않은 메소드 호출">
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/RequestMapping.java" afterDir="false" />
+    <list default="true" id="f5285a2d-389e-4ce4-8afd-6b392544cacf" name="Changes" comment="패키지 위치 변경">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ComponentScanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/DispatcherServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/annotation/Component.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/annotation/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -40,6 +47,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
@@ -49,6 +57,31 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="shop.mtcoding.annotation" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="shop.mtcoding.Main" />
+      <module name="testapp.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shop.mtcoding.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,6 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684645624204</updated>
       <workItem from="1684645625186" duration="1703000" />
+      <workItem from="1684677570952" duration="5033000" />
     </task>
     <task id="LOCAL-00001" summary="컴포넌트 스캔이 적용되지 않은 메소드 호출">
       <created>1684646072672</created>
@@ -66,7 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684646072672</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="리플렉션을 적용한 UserController 메소드 호출">
+      <created>1684678207022</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684678207022</updated>
+    </task>
+    <task id="LOCAL-00003" summary="패키지 위치 변경">
+      <created>1684678298999</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684678298999</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,6 +122,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="컴포넌트 스캔이 적용되지 않은 메소드 호출" />
-    <option name="LAST_COMMIT_MESSAGE" value="컴포넌트 스캔이 적용되지 않은 메소드 호출" />
+    <MESSAGE value="리플렉션을 적용한 UserController 메소드 호출" />
+    <MESSAGE value="패키지 위치 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="패키지 위치 변경" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ComponentScanner.java</url>
+          <line>13</line>
+          <properties class="shop.mtcoding._core.ComponentScanner" method="scanClass">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ComponentScanner.java</url>
+          <line>33</line>
+          <properties class="shop.mtcoding._core.ComponentScanner" method="scanPackage">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
