@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5285a2d-389e-4ce4-8afd-6b392544cacf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/UserController.java" afterDir="false" />
+    <list default="true" id="f5285a2d-389e-4ce4-8afd-6b392544cacf" name="Changes" comment="컴포넌트 스캔이 적용되지 않은 메소드 호출">
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/RequestMapping.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -56,11 +57,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684645624204</updated>
-      <workItem from="1684645625186" duration="415000" />
+      <workItem from="1684645625186" duration="1703000" />
     </task>
+    <task id="LOCAL-00001" summary="컴포넌트 스캔이 적용되지 않은 메소드 호출">
+      <created>1684646072672</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684646072672</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="컴포넌트 스캔이 적용되지 않은 메소드 호출" />
+    <option name="LAST_COMMIT_MESSAGE" value="컴포넌트 스캔이 적용되지 않은 메소드 호출" />
   </component>
 </project>
