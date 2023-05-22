@@ -2,6 +2,7 @@ package shop.mtcoding._core;
 
 import shop.mtcoding.annotation.Controller;
 import shop.mtcoding.annotation.RequestMapping;
+import shop.mtcoding.annotation.ResponseBody;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -32,8 +33,14 @@ public class DispatcherServlet {
                     if (rm.uri().equals(uri)) {
                         isFind = true;
 
+                        if (mt.isAnnotationPresent(ResponseBody.class)) {
+                            Object result = mt.invoke(instance);
+                            useMessageConvert(result);
+                        }
                         // 동일하다면 해당 메소드 호출
-                        mt.invoke(instance);
+                        else {
+                            mt.invoke(instance);
+                        }
                     }
                 }
             }
@@ -41,5 +48,9 @@ public class DispatcherServlet {
         if(isFind == false){
             System.out.println("404 Not Found");
         }
+    }
+
+    private static void useMessageConvert(Object object) {
+        System.out.println("MessageConvert : "+MessageConverter.convert(object));
     }
 }

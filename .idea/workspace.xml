@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5285a2d-389e-4ce4-8afd-6b392544cacf" name="Changes" comment="패키지 위치 변경">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ComponentScanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/DispatcherServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/annotation/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/annotation/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="f5285a2d-389e-4ce4-8afd-6b392544cacf" name="Changes" comment="컴포넌트 스캔 적용">
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/MessageConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/annotation/ResponseBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/DispatcherServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +32,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2Q5Zu8Cs32NaQMQNMtZOxlt17HW" />
@@ -43,20 +45,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="shop.mtcoding.annotation" />
@@ -91,7 +93,8 @@
       <option name="presentableId" value="Default" />
       <updated>1684645624204</updated>
       <workItem from="1684645625186" duration="1703000" />
-      <workItem from="1684677570952" duration="5033000" />
+      <workItem from="1684677570952" duration="5982000" />
+      <workItem from="1684725784195" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="컴포넌트 스캔이 적용되지 않은 메소드 호출">
       <created>1684646072672</created>
@@ -114,38 +117,44 @@
       <option name="project" value="LOCAL" />
       <updated>1684678298999</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="컴포넌트 스캔 적용">
+      <created>1684682731510</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684682731510</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="컴포넌트 스캔이 적용되지 않은 메소드 호출" />
     <MESSAGE value="리플렉션을 적용한 UserController 메소드 호출" />
     <MESSAGE value="패키지 위치 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="패키지 위치 변경" />
+    <MESSAGE value="컴포넌트 스캔 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="컴포넌트 스캔 적용" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ComponentScanner.java</url>
-          <line>13</line>
-          <properties class="shop.mtcoding._core.ComponentScanner" method="scanClass">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ComponentScanner.java</url>
-          <line>33</line>
-          <properties class="shop.mtcoding._core.ComponentScanner" method="scanPackage">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="5" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/DispatcherServlet.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

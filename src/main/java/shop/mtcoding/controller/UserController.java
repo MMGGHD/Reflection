@@ -2,13 +2,18 @@ package shop.mtcoding.controller;
 
 import shop.mtcoding.annotation.Controller;
 import shop.mtcoding.annotation.RequestMapping;
+import shop.mtcoding.annotation.ResponseBody;
+import shop.mtcoding.model.User;
 
 @Controller
 public class UserController {
 
     @RequestMapping(uri = "/login")
-    public void login(){
+    @ResponseBody
+    public User login(){
         System.out.println("login() 호출됨");
+        User user = new User(1, "ssar", "1234", "ssar@nate.com");
+        return user;
     }
 
     @RequestMapping(uri = "/join")
