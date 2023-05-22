@@ -16,8 +16,9 @@ public class UserController {
         return user;
     }
 
-    @RequestMapping(uri = "/join")
-    public void join(){
+    @RequestMapping(uri = "/joinForm")
+    public String joinForm(){
         System.out.println("join() 호출됨");
+        return "joinForm";
     }
 }

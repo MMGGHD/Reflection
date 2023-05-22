@@ -20,3 +20,18 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+
+tasks {
+    processResources {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE // 중복 시 실패 전략 설정
+    }
+}
+
+sourceSets {
+    getByName("main") {
+        resources {
+            srcDirs("src/main/resources")
+        }
+    }
+}

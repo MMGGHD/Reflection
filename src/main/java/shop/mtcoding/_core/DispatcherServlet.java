@@ -33,13 +33,16 @@ public class DispatcherServlet {
                     if (rm.uri().equals(uri)) {
                         isFind = true;
 
+                        // ResponseBody 어노테이션이 붙어있으면 메시지 컨버터 발동
                         if (mt.isAnnotationPresent(ResponseBody.class)) {
                             Object result = mt.invoke(instance);
                             useMessageConvert(result);
                         }
+
                         // 동일하다면 해당 메소드 호출
                         else {
-                            mt.invoke(instance);
+                            String fileName = (String) mt.invoke(instance);
+                            ViewResolver.findHTML(fileName);
                         }
                     }
                 }
