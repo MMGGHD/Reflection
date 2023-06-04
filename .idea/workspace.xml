@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5285a2d-389e-4ce4-8afd-6b392544cacf" name="Changes" comment="MessageConverter 적용">
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ViewResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/joinForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/joinForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ComponentScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ComponentScanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ViewResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ViewResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/mtcoding/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/joinForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2Q5Zu8Cs32NaQMQNMtZOxlt17HW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,6 +59,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/fast_lab/end/Reflection-Make-Spring/src/main/resources/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,6 +68,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\fast_lab\end\Reflection-Make-Spring\src\main\resources\templates" />
+      <recent name="C:\fast_lab\end\Reflection-Make-Spring\src\main\resources\templates\user" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dev\workspace\pastcamp\testapp\src\main\java\shop\mtcoding" />
     </key>
@@ -100,6 +111,7 @@
       <workItem from="1684677570952" duration="5982000" />
       <workItem from="1684725784195" duration="4139000" />
       <workItem from="1684738422608" duration="6572000" />
+      <workItem from="1685870724124" duration="6929000" />
     </task>
     <task id="LOCAL-00001" summary="컴포넌트 스캔이 적용되지 않은 메소드 호출">
       <created>1684646072672</created>
@@ -164,23 +176,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ViewResolver.java</url>
-          <line>8</line>
-          <properties class="shop.mtcoding._core.ViewResolver" method="findHTML">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/shop/mtcoding/_core/ViewResolver.java</url>
-          <line>60</line>
-          <properties class="shop.mtcoding._core.ViewResolver" method="convert">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
+          <line>14</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

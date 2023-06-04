@@ -6,9 +6,9 @@ import shop.mtcoding.annotation.RequestMapping;
 @Controller
 public class BoardController {
 
-    @RequestMapping(uri = "/save")
-    public void save(){
-        System.out.println("save 호출됨");
+    @RequestMapping(uri = "/")
+    public String main(){
+        return "index";
     }
 
 }

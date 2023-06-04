@@ -12,7 +12,7 @@ public class ComponentScanner {
 
     // 클래스를 스캔하는 메소드
     public static Set<Class> scanClass(String pkg) throws Exception {
-        // 현재 패키지 위치를 받아옴
+        // 현재 패키지 위치를 받아옴 (shop.mtcoding._core)
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
         // 클래스들을 담을 컬렉션
@@ -48,9 +48,14 @@ public class ComponentScanner {
                 String className = pkg + "." + fileName.replace(".class", "");
                 Class cls = Class.forName(className);
 
-                // 해당 클래스의 어노테이션이 메타 어노케이션으로 Component를 갖고 있거나, Component 어노테이션을 갖고 있을 경우
+                // 해당 클래스가 어노테이션이면 검사하지 않는다.
+                if(cls.isAnnotation()){
+                    return;
+                }
+
+                // 해당 클래스의 어노테이션이 메타 어노테이션으로 Component를 갖고 있거나, Component 어노테이션을 갖고 있을 경우
                 if (hasMetaAnnotation(cls, Component.class) || cls.isAnnotationPresent(Component.class)) {
-                    // 매개변수로 전달받은 컬렉션에 저장
+                    // 매개변수로 전달받은 컬렉션에 저장 (해당 클래스가 어노테이션이 아닐 경우만)
                     classes.add(cls);
                 }
             }

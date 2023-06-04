@@ -3,52 +3,21 @@ package shop.mtcoding._core;
 
 import java.io.*;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ViewResolver {
 
-    public static void findHTML(String fileName) throws Exception {
-
-        // 현재 패키지 위치를 받아옴
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-
-        // 매개변수로 전달받은 패키지 위치
-        URL packageUrl = classLoader.getResource("shop");
-
-        // 지정한 패키지의 모든 파일 불러오기
-        File packageDirectory = new File(packageUrl.toURI());
-
-        // 상위 패키지로 이동
-        File resourceDirectory = packageDirectory.getParentFile().getParentFile().getParentFile().getParentFile();
-
-        // 패키지의 클래스 스캔
-        scanPackage("resource/main/templates", resourceDirectory,fileName+".html");
-
+    public static String convert(String fileName) throws Exception {
+        // 프로젝트의 root 경로를 찾음 (자바 소스 파일을 찾을 때는 ClassLoader 사용)
+        String projectRootPath = System.getProperty("user.dir");
+        // mac 과 window 와 linux 파일 시스템이 달라서 / or \ 등을 운영체제 시스템에 맞추는 방법 : File.separator
+        String resourcePath = projectRootPath + File.separator+"build"+ File.separator+"resources"+ File.separator+"main"+ File.separator+"templates"+File.separator;
+        fileName = fileName.replace("/", File.separator);
+        return htmlFileRead(resourcePath+fileName+".html");
     }
 
-    private static void scanPackage(String pkg, File directory, String htmlName) throws Exception {
-
-        for (File file : directory.listFiles()) {
-            String fileName = file.getName();
-
-            // 해당 파일이 패키지일경우
-            if (file.isDirectory()) {
-
-                // 재귀적으로 사용하여 하위 패키지를 스캔한다.
-                scanPackage(pkg + "." + fileName, file, htmlName);
-
-            // 해당 파일이 html 일경우
-            } else if (fileName.endsWith(".html")) {
-
-                if (htmlName.equals(fileName)) {
-                    System.out.println(convert(file.getAbsolutePath()));
-                }
-
-            }
-        }
-
-    }
-
-    private static String convert(String HTMLFilePath) throws Exception {
+    private static String htmlFileRead(String HTMLFilePath) throws Exception {
         StringBuilder contentBuilder = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new FileReader(HTMLFilePath))) {
             String line;

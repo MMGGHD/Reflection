@@ -19,6 +19,6 @@ public class UserController {
     @RequestMapping(uri = "/joinForm")
     public String joinForm(){
         System.out.println("join() 호출됨");
-        return "joinForm";
+        return "user/joinForm";
     }
 }

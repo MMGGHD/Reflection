@@ -8,16 +8,23 @@ import java.util.Set;
 
 public class Main {
 
+    /**
+     * 요청1 : /joinForm
+     * 요청2 : /login
+     * 요청3 : /
+     */
     public static void main(String[] args) throws Exception {
-        // URI 입력 받기
+        // 1. URI 입력 받기
         Scanner sc = new Scanner(System.in);
         String uri = sc.nextLine();
+        // String uri = "/joinForm";
 
-        // 컴포넌트 스캔
-        Set<Class> classes = ComponentScanner.scanClass("shop");
+        // 2. 컴포넌트 스캔
+        Set<Class> classes = ComponentScanner.scanClass("shop.mtcoding");
 
-        // 입력받은 URI로 메소드 호출
-        DispatcherServlet.findUri(classes, uri);
+        // 3. 입력받은 URI로 메소드 호출
+        String response = DispatcherServlet.findUri(classes, uri);
+        System.out.println(response);
     }
 
 }

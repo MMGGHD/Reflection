@@ -9,11 +9,8 @@ import java.lang.reflect.Method;
 import java.util.Set;
 
 public class DispatcherServlet {
-    // URI 찾기
-    public static void findUri(Set<Class> classes, String uri) throws Exception {
-        // URI를 찾았는지 여부를 판단하는 변수
-        boolean isFind = false;
 
+    public static String findUri(Set<Class> classes, String uri) throws Exception {
         for (Class cls : classes) {
 
             // 해당 클래스가 Controller 어노테이션을 가지고 있을 경우
@@ -31,29 +28,20 @@ public class DispatcherServlet {
 
                     // 매개변수로 전달받은 URI와 RequestMapping의 uri 변수가 동일한지 확인
                     if (rm.uri().equals(uri)) {
-                        isFind = true;
-
                         // ResponseBody 어노테이션이 붙어있으면 메시지 컨버터 발동
                         if (mt.isAnnotationPresent(ResponseBody.class)) {
                             Object result = mt.invoke(instance);
-                            useMessageConvert(result);
+                            return MessageConverter.convert(result);
                         }
-
-                        // 동일하다면 해당 메소드 호출
+                        // 그게 아니라면 뷰 리졸버 발동
                         else {
                             String fileName = (String) mt.invoke(instance);
-                            ViewResolver.findHTML(fileName);
+                            return ViewResolver.convert(fileName);
                         }
                     }
                 }
             }
         }
-        if(isFind == false){
-            System.out.println("404 Not Found");
-        }
-    }
-
-    private static void useMessageConvert(Object object) {
-        System.out.println("MessageConvert : "+MessageConverter.convert(object));
+        return "404 Not Found";
     }
 }
